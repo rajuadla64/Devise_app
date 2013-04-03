@@ -1,0 +1,28 @@
+
+<% for a in @courses do %>
+    <div title="details">
+      <%= a.coursename %>
+      <br>
+      <br>
+      <table class="table table-bordered"><tr><th>coursename</th><th>gender</th><th>traningtype</th><th>tutor</th><th>exp</th><th>paytype</th><th>price</th><th>rating</th>
+      </tr>
+        <tr><td>
+          <%= a.coursename %></td>
+          <td>
+            <%= a.gender %></td>
+          <td>
+            <%= a.trainingtype %></td>
+          <td>
+            <%= a.tutor %></td>
+          <td>
+            <%= a.exp %></td>
+          <td>
+            <%= a.paytype %></td>
+          <td>
+            <%= a.price %></td>
+          <td>
+            <%= a.rating %></td></tr>
+
+      </table></div>                       <br><br>
+<% end %>
+<%= paginate @courses ,:remote=>true%>

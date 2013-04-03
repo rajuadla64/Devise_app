@@ -1,0 +1,134 @@
+<style type="text/css">
+  input
+</style>
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css"
+      xmlns="http://www.w3.org/1999/html"/>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script src="http://code.jquery.com/ui/1.10.2/jquery-ui.js"></script>
+<link rel="stylesheet" href="/resources/demos/style.css" />
+
+<script>
+    $(function() {
+        $( "#slider-range" ).slider({
+            range: true,
+            min: 0,
+            max: 1000,
+            values: [0,1000],
+            slide: function( event, ui ) {
+                $( "#amount" ).val( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
+
+            }
+        });$( "#amount" ).val( "$" + $( "#slider-range" ).slider( "values", 0 ) +
+                " - $" + $( "#slider-range" ).slider( "values", 1 ) );
+
+    });
+    $(function() {
+        $( "#slider1-range" ).slider({
+            range: true,
+            min: 1,
+            max: 21,
+            values: [0,21],
+            slide: function( event, ui ) {
+                $( "#exp" ).val( ui.values[ 0 ] + " yr -" + ui.values[ 1 ]+" yr" );
+        //alert(" ");
+            }
+
+        });$( "#exp" ).val(  $( "#slider1-range" ).slider( "values", 0 ) +
+         " yr -" + $( "#slider1-range" ).slider( "values", 1 )+"yr" );
+    });
+
+</script>
+
+<div class="container">
+  <div class="row">
+    <div class="span3" style="margin-right: 15px;border: 2px solid #ccc;border-radius: 20px">
+    <div>Course</div><br>
+    <input type="text" id="coursename" name="coursename" onblur= "about()" style="height: 30px" remote=true ><hr>
+      <div>
+        Gender
+      </div>     <br>
+      <input type="radio" id="male" name="gender" value="male" onclick="about()" remote=true> Male
+
+      <input type="radio" id="female" name="gender" value="female" onclick="about()"  remote=true> Female
+
+      <input type="radio" id="any" name="gender" onclick="about()" remote=true>Any<br><hr>
+      <div>Rating</div>
+                             <br>
+        <div>
+    <div style="float: left">    <select class="selectboxit selectpicker btn" id="rating1" name="rating1" onchange="about()" remote=true style="width: 120px"><option value="">select</option><option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option></select><span>To</span></div>
+     <div style="float: left"> <select class="selectboxit selectpicker btn" id="rating2" name="rating2" onchange="about()" remote=true style="width: 120px"><option value="">select</option><option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option></select></div> </div>
+     <br><hr>
+      <div>PayType</div> <br>
+      <select class="selectboxit selectpicker btn" id="paytype" name="paytype" onchange="about()" >
+        <option value="">select</option>
+        <option value="pay course">pay course</option>
+        <option value="pay hour">pay hour</option>
+        <option value="pay day">pay day</option>
+        </select> <hr>
+      <p>
+        <label for="amount">Price range:</label>
+        <input type="text" id="amount" style="border: 0; color: #f6931f; font-weight: bold;"  />
+
+      <div id="slider-range" style="width: 200px;height: 5px;margin-left: 20px"  ></div></p> <hr>
+
+      <p>
+        <label for="exp">Exp range:</label>
+          <input type="text" id="exp" style="border: 0; color: #f6931f; font-weight: bold;" onblur="about()"/>
+      </p>
+      <div id="slider1-range" style="width: 200px;height: 5px;margin-left: 20px"></div>
+      <br>
+      <br>
+    </div>
+    <div class="span5" style="margin-right: 120px" >
+      <div id="main">
+      <% for a in @courses do %>
+          <div title="details">
+            <%= a.coursename %>
+            <br>
+            <br>
+          <table class="table table-bordered"><tr><th>coursename</th><th>gender</th><th>traningtype</th><th>tutor</th><th>exp</th><th>paytype</th><th>price</th><th>rating</th>
+          </tr>
+            <tr><td>
+              <%= a.coursename %></td>
+            <td>
+              <%= a.gender %></td>
+            <td>
+              <%= a.trainingtype %></td>
+            <td>
+              <%= a.tutor %></td>
+            <td>
+              <%= a.exp %></td>
+            <td>
+              <%= a.paytype %></td>
+            <td>
+              <%= a.price %></td>
+            <td>
+              <%= a.rating %></td></tr>
+
+          </table></div>                       <br><br>
+      <% end %>
+
+        <%#= paginate @courses %>
+              <div class="paginate">
+
+            <%= paginate @courses %>
+                                </div>
+      </div>
+
+    </div>
+
+    <div class="span2" >
+      <h2>About Us</h2>
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    </div>
+  </div>
+</div>
+

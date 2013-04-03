@@ -1,0 +1,58 @@
+
+<script type="text/javascript">
+   $(document).ready(function(){
+       $("#notice").dialog({
+           autoOpen :true,
+           height :600,
+           width :300,
+           modal :true
+       });
+    $( "#addcourse_form" ).dialog({
+        autoOpen: false,
+        height: 600,
+        width: 350,
+        modal: true});
+
+    $( "#add_course" )
+
+            .click(function() {
+                $( "#addcourse_form" ).dialog( "open" );
+            });
+   });
+</script>
+
+<h1>Welcome To Your DashBoard</h1>
+
+<div id="addcourse_form" title= "Add new course">
+  <%= form_for :addcourse,:controller=>"dashboard",:action=>"create" do |add|%>
+      <%= add.label :coursename %>
+      <%= add.text_field :coursename %>
+      <%= add.label :trainingtype %>
+      <%= add.text_field :trainingtype %>
+      <%= add.label :tutor %>
+      <%= add.text_field :tutor %>
+      <%= add.label :gender_male, 'Male' %>
+      <%= add.radio_button :gender, 'male' %>
+      <%= add.label :gender_female, 'Female' %>
+      <%= add.radio_button :gender, 'female' %>
+
+      <%= add.label :exp%>
+      <%= add.text_field :exp %>
+      <%= add.label :price %>
+      <%= add.text_field :price %>
+      <%= add.label :rating %>
+      <%= add.select :rating, options_for_select([["1",1],["2",2],["3",3],["4",4],["5",5]]),:prompt=>"select your rating" %>
+      <%= add.label :paytype %>
+      <%= add.select :paytype,options_for_select([["pay hour","pay hour"],["pay course","pay course"],["pay day"]]),:prompt=>"select pay type" %>
+      <%= add.submit :addcourse %>
+  <% end %>
+</div>
+<div id="notice">
+<% if !params[:nothing] %>
+  hai
+      hai
+      hai
+  <% else %>
+  <%= params[:nothing] %>
+  <% end %>
+    </div>

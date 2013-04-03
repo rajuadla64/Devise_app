@@ -1,0 +1,28 @@
+<%= form_tag :action=>"onlinecourse1",:remote=>true do%>
+    <table class="table">
+<tr><th><%= label_tag :coursename %></th>
+   <th><%= text_field_tag :coursename %></th></tr>
+   <tr><th><%= label_tag :coursecategory %></th>
+   <th> <%= select_tag :coursecategory,options_for_select([['software','software'],['hardware','hardware'],['database','database']]),:prompt=>"select category" %></th></tr>
+   <tr><th> <%= label_tag :vendor %></th>
+  <th>  <%= text_field_tag :vendor %></th></tr>
+      <tr><th><%= label_tag :description %></th>
+       <th><%= text_area_tag :description %></th></tr>
+      <tr><th> <%= label_tag :keywords %></th>
+      <th>  <%= text_field_tag :keywords %></th></tr>
+      <tr><th> <%= label_tag :url %></th>
+      <th>  <%= text_field_tag :url %></th></tr>
+      <tr><th> <%= label_tag :price %></th>
+        <th>  <%= text_field_tag :price %></th></tr>
+      <tr><th><%= label_tag :paytype %></th>
+        <th> <%= select_tag :paytype,options_for_select([['payhour','payhour'],['payday','payday'],['paycourse','paycourse']]),:prompt=>"select paytype" %></th></tr>
+      <tr><th> <%= label_tag :author %></th>
+        <th>  <%= text_field_tag :auhtor %></th></tr>
+      <tr><th> <%= label_tag :courseimage %></th>
+        <th>  <%= file_field_tag :courseimage %></th></tr>
+      <tr><th> <%= label_tag :coursevideo %></th>
+        <th>  <%= file_field_tag :coursevideo %></th></tr>
+      <tr><th> </th>
+        <th>  <%= submit_tag :AddOnlineCourse %></th></tr>
+    </table>
+<% end %>
