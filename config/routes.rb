@@ -70,6 +70,7 @@ DeviseApp::Application.routes.draw do
   match 'vendor/workshop' => "vendor#workshop"
   match 'vendor/institute' => "vendor#institute"
   match 'vendor/onlinecourse1' => "vendor#onlinecourse1"
+  match 'tutor/tutor' =>"tutor#tutor"
 
 
   # See how all your routes lay out with "rake routes"

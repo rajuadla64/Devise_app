@@ -8,7 +8,9 @@ gem 'rails', '3.2.8'
 gem 'mysql','2.8.1'
 gem 'devise'
 #gem 'tlsmail'
-
+group :production do
+  gem 'pg', '0.12.2'
+end
 
 # Gems used only for assets and not required
 # in production environments by default.
@@ -33,6 +35,8 @@ gem 'progress_bar'
 gem 'kaminari'
 gem 'dm-core'
 gem 'dm-aggregates'
+#gem 'copycopter_client', '2.0.0'
+gem "heroku"
 #gem "haml-rails"
 
 # To use ActiveModel has_secure_password

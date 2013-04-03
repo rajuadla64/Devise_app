@@ -14,7 +14,7 @@
   <div><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
     <div><%= f.label :role %><br />
-      <%= f.select :role,options_for_select([['admin',1],['vendor',2],['student',3]]),:prompt=>"select role" %></div>
+      <%= f.select :role,options_for_select([['admin',1],['vendor',2],['student',4],['tutor',3]]),:prompt=>"select role" %></div>
 
 
     <div><%= f.submit "Sign up" %></div>

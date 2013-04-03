@@ -15,6 +15,9 @@ class DashboardController < ApplicationController
     if current_user.learner?
       redirect_to :controller=>"learner",:action=>"learner"
     end
+    if current_user.tutor?
+      redirect_to :controller=>"tutor",:action=>"tutor"
+    end
 
   end
   def create

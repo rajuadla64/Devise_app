@@ -14,7 +14,10 @@ class User < ActiveRecord::Base
   def vendor?
     self.role == "2"
   end
-  def learner?
+  def tutor?
     self.role == "3"
+  end
+  def learner?
+    self.role == "4"
   end
 end

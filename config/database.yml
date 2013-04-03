@@ -5,9 +5,7 @@
 #   gem 'sqlite3'
 development:
   adapter: mysql
-
   database: Devise_Example
-
   username: root
   password: root1
 
