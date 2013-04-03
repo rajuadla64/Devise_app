@@ -66,6 +66,7 @@
     <file path="/_workshop.html.erb" changelist="57b7f55f-4c0a-4025-8f38-9d845b0e5143" time="1364817146789" ignored="false" />
     <file path="/.rvmc" changelist="57b7f55f-4c0a-4025-8f38-9d845b0e5143" time="1364973928537" ignored="false" />
     <file path="/tutor.html.erb" changelist="57b7f55f-4c0a-4025-8f38-9d845b0e5143" time="1364980986670" ignored="false" />
+    <file path="/production.rb" changelist="57b7f55f-4c0a-4025-8f38-9d845b0e5143" time="1364991131956" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -91,15 +92,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="new.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="94" selection-start="621" selection-end="621" vertical-scroll-proportion="-10.666667">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="user.rb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/models/user.rb">
           <provider selected="true" editor-type-id="text-editor">
@@ -118,10 +110,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Gemfile" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gemfile">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="12" column="3" selection-start="234" selection-end="234" vertical-scroll-proportion="0.24895689">
+            <state line="12" column="3" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="production.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="30" selection-start="642" selection-end="642" vertical-scroll-proportion="0.4255911">
               <folding />
             </state>
           </provider>
@@ -182,7 +183,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/views/vendor/_workshop.html.erb" />
         <option value="$PROJECT_DIR$/app/views/vendor/_onlinecourse.html.erb" />
         <option value="$PROJECT_DIR$/app/controllers/vendor_controller.rb" />
         <option value="$PROJECT_DIR$/app/assets/stylesheets/bootstrap_and_overrides.css.less" />
@@ -198,6 +198,7 @@
         <option value="$PROJECT_DIR$/config/routes.rb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/config/environments/production.rb" />
       </list>
     </option>
   </component>
@@ -264,6 +265,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Devise_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Devise_App" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="config" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="environments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -815,20 +834,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/controllers/tutor_controller.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/vendor.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="41" column="60" selection-start="1458" selection-end="1458" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/vendor_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="9" column="33" selection-start="164" selection-end="164" vertical-scroll-proportion="0.0">
@@ -920,7 +925,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Gemfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="12" column="3" selection-start="234" selection-end="234" vertical-scroll-proportion="0.24895689">
+        <state line="12" column="3" selection-start="234" selection-end="234" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/devise/registrations/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="94" selection-start="621" selection-end="621" vertical-scroll-proportion="-10.666667">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/environments/production.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="30" selection-start="642" selection-end="642" vertical-scroll-proportion="0.4255911">
           <folding />
         </state>
       </provider>
