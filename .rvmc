@@ -1,4 +1,4 @@
 
 rvm use 1.9.2
-rake sunspot:solr:start
-rake sunspot:reindex
+heroku run rake sunspot:solr:start
+heroku run rake sunspot:reindex
