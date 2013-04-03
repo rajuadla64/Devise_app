@@ -1,3 +1,11 @@
+GIT
+  remote: git://github.com/webmat/progress_bar.git
+  revision: 7184097b1b413abba8bbcbf3068d98a878fa92e0
+  specs:
+    progress_bar (0.4.0)
+      highline (~> 1.6.1)
+      options (~> 2.3.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -96,9 +104,6 @@ GEM
     pg (0.12.2)
     polyglot (0.3.3)
     pr_geohash (1.0.0)
-    progress_bar (1.0.0)
-      highline (~> 1.6.1)
-      options (~> 2.3.0)
     rack (1.4.5)
     rack-cache (1.2)
       rack (>= 0.4)
@@ -179,7 +184,7 @@ DEPENDENCIES
   less-rails
   mysql (= 2.8.1)
   pg (= 0.12.2)
-  progress_bar
+  progress_bar!
   rails (= 3.2.8)
   sass-rails (~> 3.2.3)
   sunspot_rails
